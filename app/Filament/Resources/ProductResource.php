@@ -48,8 +48,8 @@ class ProductResource extends Resource
             ->columns([
                 TextColumn::make('nama_produk')->label('Nama Produk'),
                 ImageColumn::make('gambar')
-    ->disk('public_uploads')
-    ->label('Gambar'),
+                    ->disk('public_uploads')
+                    ->label('Gambar'),
 
 
                 TextColumn::make('category.nama_kategori')->label('Kategori'),
