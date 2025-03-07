@@ -39,6 +39,9 @@ class ProductResource extends Resource
                     ->directory(''),
                 Textarea::make('deskripsi')
                     ->label('Deskripsi'),
+                    TextInput::make('harga')
+                    ->label('Harga')
+                    ->required(),
             ]);
     }
 
@@ -54,6 +57,7 @@ class ProductResource extends Resource
 
                 TextColumn::make('category.nama_kategori')->label('Kategori'),
                 TextColumn::make('deskripsi')->label('Deskripsi'),
+                TextColumn::make('harga')->label('Harga'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

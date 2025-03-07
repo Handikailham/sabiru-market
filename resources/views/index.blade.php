@@ -1,396 +1,175 @@
 @extends('layouts.app')
 
-@section('title', 'Sabiru Market')
-
 @section('content')
-    <!-- Hero / Jumbotron Section -->
-    <section class="relative text-center flex items-center justify-center" style="min-height: 500px;">
-        <!-- Background Image with low opacity and larger size -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('uploads/pp.jpg'); background-size: 100%;"></div>
-
-        <div class="relative z-10 text-center">
-            <h1 class="text-5xl font-bold text-white drop-shadow-lg">All Fast Food is Available at Sabiru</h1>
-            <p class="text-gray-900 mt-4 drop-shadow-md">We are just a click away from your favorite delicious fast food.</p>
-            <a href="{{ route('product.index') }}">
-                <button
-                    type="submit"
-                    class="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-orange-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
-                >
-                    Jelajahi Menu
-                    <svg
-                        class="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45"
-                        viewBox="0 0 16 19"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                            class="fill-gray-800 group-hover:fill-gray-800"
-                        ></path>
-                    </svg>
-                </button>
-            </a>
+  <!-- Hero Section -->
+  <section class="bg-white py-10 md:py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Kolom Teks (Lebar 1/3) -->
+      <div class="w-full md:w-1/3 flex flex-col items-start text-left pl-4 md:pl-0">
+        <!-- Ornamen Dekorasi SVG Berwarna Biru -->
+        <div class="mb-6 w-full">
+          <svg class="w-full h-20" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ornamentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#3B82F6" />
+                <stop offset="100%" stop-color="#60A5FA" />
+              </linearGradient>
+            </defs>
+            <!-- Bentuk pita abstrak dengan lengkungan -->
+            <path fill="url(#ornamentGradient)" d="M0,40 C150,0 450,80 600,40 L600,70 C450,110 150,30 0,70 Z" />
+            <!-- Garis aksen untuk menegaskan lengkungan -->
+            <path fill="none" stroke="#3B82F6" stroke-width="2" d="M0,40 C150,0 450,80 600,40" />
+          </svg>
         </div>
-    </section>
-
-        <section class="mt-12"> <div class="bg-white shadow-md rounded-lg p-6 flex justify-around"> 
-            <div class="text-center"> 
-                <i class="fas fa-truck text-4xl text-orange-500"></i> 
-                <h3 class="text-lg font-bold mt-2">Fast Delivery</h3> 
-                <p class="text-gray-600">Within 30 minutes</p> 
-            </div> 
-            <div class="text-center"> 
-                <i class="fas fa-utensils text-4xl text-orange-500"></i> 
-                <h3 class="text-lg font-bold mt-2">Fresh Food</h3> 
-                <p class="text-gray-600">Made to order</p> 
-            </div> 
-            <div class="text-center"> 
-                <i class="fas fa-shipping-fast text-4xl text-orange-500"></i> 
-                <h3 class="text-lg font-bold mt-2">Free Delivery</h3> 
-                <p class="text-gray-600">On orders over $50</p> 
-            </div> 
-        </div> 
-    </section> 
-
-    <!-- Section Informasi -->
-    <section class="mt-12">
-        <h2 class="text-3xl font-bold text-gray-800">
-         Our
-         <span class="text-orange-500">
-          Regular
-         </span>
-         Menu
-        </h2>
-        <p class="text-gray-600 mt-2">
-         These are our regular menus that our customers love.
+        <h1 class="text-blue-500 text-4xl md:text-5xl font-bold leading-tight">
+          SABIRU MARKET
+        </h1>
+        <p class="mt-4 text-gray-700 text-base md:text-lg max-w-md">
+          Selamat datang di Sabiru Market, tempat terbaik untuk menikmati berbagai macam burger lezat dan minuman segar. Temukan cita rasa unik yang memanjakan lidah Anda!
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-         <div class="bg-white shadow-md rounded-lg p-4 text-center">
-          <img alt="Chicken Burger" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/o9Ee3Clxfb60TTyxYHzoMX47OHhSbcNXdKaNHJMLmK0.jpg" width="100"/>
-          <h3 class="text-lg font-bold mt-2">
-           Chicken Burger
-          </h3>
-          <p class="text-gray-600">
-           $3.50
-          </p>
-          <a href="{{ route('product.index') }}">
-            <button
-              class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-gray-800 rounded-md group"
-            >
-              <span
-                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-56 group-hover:h-56"
-              ></span>
-              <span class="absolute bottom-0 left-0 h-full -ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-auto h-full opacity-100 object-stretch"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="object-cover w-full h-full"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
-                  ></path>
-                </svg>
-              </span>
-              <span
-                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"
-              ></span>
-              <span class="relative text-base font-semibold">Buy Now</span>
-            </button>
-          </a>
-         </div>
-         <div class="bg-white shadow-md rounded-lg p-4 text-center">
-          <img alt="Chicken Pizza" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/FVVD6QIybZC6ULAHzuQQvl95Dx9BqvXoFurVWzT5VKU.jpg" width="100"/>
-          <h3 class="text-lg font-bold mt-2">
-           Chicken Pizza
-          </h3>
-          <p class="text-gray-600">
-           $4.20
-          </p>
-          <a href="{{ route('product.index') }}">
-            <button
-              class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-gray-800 rounded-md group"
-            >
-              <span
-                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-56 group-hover:h-56"
-              ></span>
-              <span class="absolute bottom-0 left-0 h-full -ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-auto h-full opacity-100 object-stretch"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="object-cover w-full h-full"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
-                  ></path>
-                </svg>
-              </span>
-              <span
-                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"
-              ></span>
-              <span class="relative text-base font-semibold">Buy Now</span>
-            </button>
-          </a>
-         </div>
-         <div class="bg-white shadow-md rounded-lg p-4 text-center">
-          <img alt="Chicken Fry" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/dhRd4o1BgkVezgU2vPttiAzq3tT7ZrMtsRsJq-zzVtY.jpg" width="100"/>
-          <h3 class="text-lg font-bold mt-2">
-           Chicken Fry
-          </h3>
-          <p class="text-gray-600">
-           $5.00
-          </p>
-          <a href="{{ route('product.index') }}">
-            <button
-              class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-gray-800 rounded-md group"
-            >
-              <span
-                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-56 group-hover:h-56"
-              ></span>
-              <span class="absolute bottom-0 left-0 h-full -ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-auto h-full opacity-100 object-stretch"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="object-cover w-full h-full"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
-                  ></path>
-                </svg>
-              </span>
-              <span
-                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"
-              ></span>
-              <span class="relative text-base font-semibold">Buy Now</span>
-            </button>
-          </a>
-         </div>
-         <div class="bg-white shadow-md rounded-lg p-4 text-center">
-          <img alt="Grill Sandwich" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/pY8ijI8xU3Mrvt91Y27RNeBzefk0p5ZsWu1O25UTmlY.jpg" width="100"/>
-          <h3 class="text-lg font-bold mt-2">
-           Grill Sandwich
-          </h3>
-          <p class="text-gray-600">
-           $4.80
-          </p>
-          <a href="{{ route('product.index') }}">
-            <button
-              class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-gray-800 rounded-md group"
-            >
-              <span
-                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-56 group-hover:h-56"
-              ></span>
-              <span class="absolute bottom-0 left-0 h-full -ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-auto h-full opacity-100 object-stretch"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="object-cover w-full h-full"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
-                  ></path>
-                </svg>
-              </span>
-              <span
-                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"
-              ></span>
-              <span class="relative text-base font-semibold">Buy Now</span>
-            </button>
-          </a>
-         </div>
-         <div class="bg-white shadow-md rounded-lg p-4 text-center">
-          <img alt="Taco Train" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/i0Ho3gDqFrTpuMo3Mh2Nr706gh6maDmyqObVj4jj1Bc.jpg" width="100"/>
-          <h3 class="text-lg font-bold mt-2">
-           Taco Train
-          </h3>
-          <p class="text-gray-600">
-           $3.63
-          </p>
-          <a href="{{ route('product.index') }}">
-            <button
-              class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-gray-800 rounded-md group"
-            >
-              <span
-                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-56 group-hover:h-56"
-              ></span>
-              <span class="absolute bottom-0 left-0 h-full -ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-auto h-full opacity-100 object-stretch"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="object-cover w-full h-full"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
-                  ></path>
-                </svg>
-              </span>
-              <span
-                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"
-              ></span>
-              <span class="relative text-base font-semibold">Buy Now</span>
-            </button>
-          </a>
-         </div>
-         <div class="bg-white shadow-md rounded-lg p-4 text-center">
-          <img alt="Noodle's Ramen" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/NlSSAcHSG68AN6TbInn5aest4BTY_BoZRR4nL2893Gg.jpg" width="100"/>
-          <h3 class="text-lg font-bold mt-2">
-           Noodle's Ramen
-          </h3>
-          <p class="text-gray-600">
-           $6.00
-          </p>
-          <a href="{{ route('product.index') }}">
-            <button
-              class="relative inline-flex items-center justify-center px-8 py-2.5 overflow-hidden tracking-tighter text-white bg-gray-800 rounded-md group"
-            >
-              <span
-                class="absolute w-0 h-0 transition-all duration-500 ease-out bg-orange-600 rounded-full group-hover:w-56 group-hover:h-56"
-              ></span>
-              <span class="absolute bottom-0 left-0 h-full -ml-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-auto h-full opacity-100 object-stretch"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="absolute top-0 right-0 w-12 h-full -mr-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="object-cover w-full h-full"
-                  viewBox="0 0 487 487"
-                >
-                  <path
-                    fill-opacity=".1"
-                    fill-rule="nonzero"
-                    fill="#FFF"
-                    d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z"
-                  ></path>
-                </svg>
-              </span>
-              <span
-                class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-200"
-              ></span>
-              <span class="relative text-base font-semibold">Buy Now</span>
-            </button>
-          </a>
-         </div>
-        </div>
-       </section>
+        <button class="mt-6 px-8 py-4 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition duration-300">
+          Order Sekarang
+        </button>
+      </div>
+      <!-- Kolom Gambar (Lebar 2/3) -->
+      <div class="w-full md:w-2/3 flex justify-center">
+        <img src="{{ asset('images/hero.png') }}" alt="Burger Image" class="w-full h-auto object-cover">
+      </div>
+    </div>
+  </section>
+  
+  
+ <!-- About Us Section -->
+<section class="py-16 bg-blue-500">
+  <div class="container mx-auto px-4">
+    <!-- Kotak putih tanpa efek miring -->
+    <div class="relative bg-white rounded-lg shadow-xl p-8 md:p-12">
+      <!-- Konten Teks -->
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-500 mb-4">Tentang Kami</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Sabiru Market didirikan dengan semangat untuk menghadirkan pengalaman kuliner yang berbeda. Kami menyediakan berbagai macam burger dengan resep istimewa dan pilihan minuman yang menyegarkan, sehingga setiap kunjungan Anda menjadi pengalaman yang tak terlupakan.
+        </p>
+        <a href="#menu" class="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow hover:bg-blue-600 transition duration-300">
+          Lihat Menu
+        </a>
+      </div>
+      <!-- Gambar ditempatkan di pojok kanan -->
+      <div class="absolute top-0 right-0 m-4 w-20 h-20">
+        <img src="{{ asset('images/sabiruicon.png') }}" alt="Tentang Kami" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <!-- Dekorasi tambahan: garis tipis di bagian bawah kotak -->
+      <div class="absolute bottom-0 left-0 w-full">
+        <hr class="border-t-2 border-blue-500">
+      </div>
+    </div>
+  </div>
+</section>
 
-       <section class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white shadow-md rounded-lg p-4 text-center relative">
-         <img alt="25% Discount on Burger" class="w-full rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/drftrdfTp2JJRAGo6qPQr2shMX1-XbZJN7iZf78ORko.jpg" width="400"/>
-         <div class="absolute top-4 left-4 bg-red-500 text-white px-2 py-1 rounded-full">
-          25% Discount
-         </div>
+
+<!-- Produk Terpopuler Section dengan jarak atas yang lebih lebar -->
+
+<section class="py-16 container mx-auto px-4 mt-20">
+  <!-- Header Judul: Background hanya sepanjang teks dengan border rounded -->
+  <h2 class="text-3xl font-bold text-blue-500 mb-6">
+    <span class="bg-blue-500 text-white px-4 py-2 inline-block rounded-full">Menu Populer</span>
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    @foreach($products as $product)
+      <div class="bg-blue-500 rounded-xl p-4 relative text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- Ikon Favorit di pojok kanan atas -->
+        <button class="absolute top-2 right-2">
+          <svg class="w-5 h-5 fill-current hover:text-gray-100 transition" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+                     2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09 
+                     1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 
+                     5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </button>
+  
+        <!-- Gambar Produk diperbesar -->
+        <div class="flex justify-center mt-2">
+          <img 
+            src="{{ asset('uploads/' . $product->gambar) }}" 
+            alt="{{ $product->nama_produk }}" 
+            class="w-40 h-40 object-contain transition-transform duration-300 transform hover:scale-110"
+          />
         </div>
-        <div class="grid grid-cols-1 gap-4">
-         <div class="bg-yellow-500 text-white p-4 rounded-lg text-center">
-          <h3 class="text-lg font-bold">
-           Save 20%
-          </h3>
-          <p>
-           On your next order
-          </p>
-         </div>
-         <div class="bg-green-500 text-white p-4 rounded-lg text-center">
-          <h3 class="text-lg font-bold">
-           15% Off
-          </h3>
-          <p>
-           Tortilla Wrap Tacos
-          </p>
-         </div>
+  
+        <!-- Nama Produk (rata kiri) -->
+        <h3 class="text-lg font-extrabold mt-4 tracking-wide">
+          {{ $product->nama_produk }}
+        </h3>
+  
+        <!-- Harga (rata kiri, tanpa IDR) -->
+        <p class="mt-3 text-xl font-semibold">
+          {{ number_format($product->harga, 0, ',', '.') }}
+        </p>
+  
+        <!-- Ikon "Plus" di pojok kanan bawah -->
+        <div class="absolute bottom-4 right-4">
+          <button class="bg-white text-blue-500 p-2 rounded-full hover:bg-blue-100 transition">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M19 11H13V5c0-0.552285-0.447715-1-1-1s-1 
+                       0.447715-1 1v6H5c-0.552285 0-1 0.447715-1 
+                       1s0.447715 1 1 1h6v6c0 0.552285 0.447715 
+                       1 1 1s1-0.447715 1-1v-6h6c0.552285 0 1-0.447715 
+                       1-1s-0.447715-1-1-1z"/>
+            </svg>
+          </button>
         </div>
-       </section>
+      </div>
+    @endforeach
+  </div>
+</section>
+
+<!-- Testimoni Section dengan jarak tambahan -->
+<section class="py-16 bg-blue-50 mt-15">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 text-blue-600">
+      Testimoni Pelanggan
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Testimoni 1 -->
+      <div class="bg-white p-8 rounded-2xl shadow-md relative transition-transform duration-300 hover:scale-105">
+        <!-- Avatar Icon (tanpa foto) -->
+        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center absolute -top-8 left-6">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+        <!-- Konten Testimoni -->
+        <div class="mt-10">
+          <p class="text-gray-700 italic text-lg">
+            "Sabiru Market memiliki burger terbaik yang pernah saya coba! Rasanya autentik dan minumannya sangat menyegarkan."
+          </p>
+          <p class="mt-6 text-right text-gray-600 font-semibold">
+            - Andi
+          </p>
+        </div>
+      </div>
+      
+      <!-- Testimoni 2 -->
+      <div class="bg-white p-8 rounded-2xl shadow-md relative transition-transform duration-300 hover:scale-105">
+        <!-- Avatar Icon (tanpa foto) -->
+        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center absolute -top-8 left-6">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+        <!-- Konten Testimoni -->
+        <div class="mt-10">
+          <p class="text-gray-700 italic text-lg">
+            "Pengalaman makan di Sabiru Market selalu menyenangkan. Setiap produk terasa istimewa dan pelayanannya ramah."
+          </p>
+          <p class="mt-6 text-right text-gray-600 font-semibold">
+            - Rina
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
 @endsection
