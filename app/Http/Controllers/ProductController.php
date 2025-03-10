@@ -25,7 +25,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         // Ambil produk lain dengan kategori yang sama, kecuali produk saat ini
-        $relatedProducts = Product::where('id_kategori', $product->id_kategori)
+        $relatedProducts = Product::limit(4)->where('id_kategori', $product->id_kategori)
                                     ->where('id', '!=', $product->id)
                                     ->get();
 
