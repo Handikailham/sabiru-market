@@ -87,58 +87,50 @@
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-6 lg:px-12">
-      <!-- Bagian Atas: Info Brand, Navigasi & Sosial Media -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Kolom 1: Info Brand -->
-        <div>
-          <h3 class="text-3xl font-bold text-white">Sabiru Market</h3>
-          <p class="text-gray-400 mt-2">Nikmati menu terbaik dengan cita rasa yang tak terlupakan.</p>
-          <div class="mt-4 space-y-1 text-gray-400">
-            <p><strong>Alamat:</strong> Jl. Contoh No. 123, Kota Contoh, Indonesia</p>
-            <p><strong>Telepon:</strong> +62 882 3971 5035</p>
-            <p><strong>Email:</strong> info@burgerbrand.com</p>
-          </div>
+    <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <!-- Kolom 1: Logo dan Deskripsi -->
+        <div class="flex flex-col">
+            <img
+                src="{{ asset('images/Market1.png') }}" 
+                alt="Logo Restoran"
+                class="w-32 h-auto mb-4" 
+            />
+            <p class="text-gray-400">
+                Baik pelanggan setia maupun pengunjung baru, kami berharap dapat melayani Anda
+                dan berbagi hasrat kami untuk masakan lezat.
+            </p>
         </div>
-  
-        <!-- Kolom 2: Navigasi -->
-        <div class="md:text-center">
-          <h4 class="text-2xl font-semibold text-white">Navigasi</h4>
-          <ul class="mt-4 space-y-2">
-            <li><a href="{{ route('index') }}" class="text-gray-400 hover:text-white transition">Beranda</a></li>
-            <li><a href="{{ route('product.index') }}" class="text-gray-400 hover:text-white transition">Menu</a></li>
-          </ul>
+        
+        <!-- Kolom 2: Jam Operasional & Alamat (terpusat) -->
+        <div class="text-center flex flex-col items-center">
+            <h4 class="text-xl font-semibold text-white mb-2">Jam Operasional</h4>
+            <p class="text-gray-400">Setiap Hari: 10:00 - 22:00</p>
+            <h4 class="text-xl font-semibold text-white mt-6 mb-2">Alamat</h4>
+            <p class="text-gray-400">Jl. Matraman Raya No.80, Matraman, Jakarta Timur 13150</p>
         </div>
-  
-        <!-- Kolom 3: Sosial Media -->
-        <div class="md:text-right">
-          <h4 class="text-2xl font-semibold text-white">Ikuti Kami</h4>
-          <div class="mt-4 flex md:justify-end space-x-4">
-            <!-- WhatsApp -->
-            <a href="https://wa.me/6288239715035" target="_blank" class="text-green-500 hover:text-green-400 transition">
-              <i class="fab fa-whatsapp text-3xl"></i>
+        
+        <!-- Kolom 3: Kontak & Tombol (rata kanan) -->
+        <div class="text-right flex flex-col items-end">
+            <h4 class="text-xl font-semibold text-white mb-2">Hubungi Kami</h4>
+            <p class="text-gray-400">+62 811 1906 0007</p>
+            <p class="text-gray-400">+62 21 859 131 04</p>
+            <p class="text-gray-400">reservasi@sarimunik.com</p>
+            <a
+                href="#"
+                class="inline-block mt-4 bg-yellow-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300"
+            >
+                HUBUNGI KAMI
             </a>
-            <!-- Instagram -->
-            <a href="#" target="_blank" class="text-pink-500 hover:text-pink-400 transition">
-              <i class="fab fa-instagram text-3xl"></i>
-            </a>
-            <!-- Twitter (X) -->
-            <a href="#" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
-              <i class="fab fa-x-twitter text-3xl"></i>
-            </a>
-          </div>
         </div>
-      </div>
-  
-      <!-- Garis Pembatas -->
-      <div class="mt-8 border-t border-gray-700 pt-6 text-center">
-        <p class="text-gray-400 text-sm">&copy; 2025 Sabiru Market. All rights reserved.</p>
-      </div>
     </div>
-  </footer>
+</footer>
   
   <!-- Tambahkan FontAwesome untuk ikon sosial media -->
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+    crossorigin="anonymous"
+  ></script>
+  
 
 </body>
 </html>
