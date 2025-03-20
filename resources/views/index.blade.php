@@ -87,7 +87,7 @@
       href="{{ route('product.index') }}"
       class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300 inline-block text-lg font-semibold"
     >
-      Pesan Sekarang
+      Menu Lengkap
     </a>
   </div>
 </section>
