@@ -10,6 +10,13 @@
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
+            <img src="{{ asset('images/slide1.jpg') }}" alt="Slide 1" class="w-full h-auto object-cover">
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="{{ asset('images/slide2.jpg') }}" alt="Slide 2" class="w-full h-auto object-cover">
+          </div>
+          <div class="swiper-slide">
             <img src="{{ asset('images/slide3.jpg') }}" alt="Slide 1" class="w-full h-auto object-cover">
           </div>
           <!-- Slide 2 -->
