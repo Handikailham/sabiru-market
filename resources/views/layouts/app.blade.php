@@ -16,6 +16,8 @@
     referrerpolicy="no-referrer" 
   />
   <title>Burger Website</title>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
 </head>
 <body class="bg-white text-gray-700">
   <!-- Header / Navbar -->
