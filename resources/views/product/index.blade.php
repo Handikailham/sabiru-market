@@ -3,7 +3,7 @@
 @section('title', 'Menu Produk Kami')
 
 @section('content')
-<div class="container mx-auto py-8">
+<div class="container mx-auto py-8" style="background: url('{{ asset('images/oishi-background.png') }}') no-repeat center center fixed; background-size: cover;">
 
     <!-- Bagian Kategori -->
     <div class="flex justify-center gap-4 mb-8">

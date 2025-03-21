@@ -15,8 +15,13 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
   />
-  <title>Burger Website</title>
+  <title>Sabiru Market</title>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  
+  <!-- CSS untuk menyembunyikan elemen dengan x-cloak -->
+  <style>
+    [x-cloak] { display: none !important; }
+  </style>
 
 </head>
 <body class="bg-white text-gray-700">
@@ -52,7 +57,7 @@
   <!-- Divider dengan border biru -->
   <a
   id="whatsapp-btn"
-  href="https://wa.me/your_number"
+  href="https://wa.me/+6288239715035"
   target="_blank"
   class="fixed right-4 z-50"
   style="bottom: 20px;"
@@ -108,17 +113,16 @@
             <h4 class="text-xl font-semibold text-white mb-2">Jam Operasional</h4>
             <p class="text-gray-400">Setiap Hari: 10:00 - 22:00</p>
             <h4 class="text-xl font-semibold text-white mt-6 mb-2">Alamat</h4>
-            <p class="text-gray-400">Jl. Matraman Raya No.80, Matraman, Jakarta Timur 13150</p>
+            <p class="text-gray-400">Jl. Matraman Raya No.80, Matraman, Cibinong 13150</p>
         </div>
         
         <!-- Kolom 3: Kontak & Tombol (rata kanan) -->
         <div class="text-right flex flex-col items-end">
             <h4 class="text-xl font-semibold text-white mb-2">Hubungi Kami</h4>
-            <p class="text-gray-400">+62 811 1906 0007</p>
-            <p class="text-gray-400">+62 21 859 131 04</p>
-            <p class="text-gray-400">reservasi@sarimunik.com</p>
+            <p class="text-gray-400">+62 882-3971-5035</p>
+            <p class="text-gray-400">sarumarket@example.com</p>
             <a
-                href="#"
+                href="https://wa.me/+6288239715035"
                 class="inline-block mt-4 bg-yellow-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300"
             >
                 HUBUNGI KAMI

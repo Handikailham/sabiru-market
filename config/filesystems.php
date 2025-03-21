@@ -66,6 +66,12 @@ return [
             'url'        => env('APP_URL') . '/uploads', // tambahkan trailing slash
             'visibility' => 'public',
 ],
+        'public_profile' => [
+            'driver'     => 'local',
+            'root'       => public_path('profile'),
+            'url'        => env('APP_URL') . '/profile', // tambahkan trailing slash
+            'visibility' => 'public',
+],
 
 
 

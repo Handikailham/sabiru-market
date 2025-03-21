@@ -51,9 +51,9 @@ class UlasanResource extends Resource
             TextColumn::make('ulasan')
                 ->label('Ulasan')
                 ->limit(50),
-            ImageColumn::make('profile')
-                ->label('Profile')
-                ->circular(),
+                ImageColumn::make('profile')
+                ->disk('public_profile')
+                ->label('Profil'),
         ])
         ->filters([])
         ->actions([

@@ -3,7 +3,7 @@
 @section('title', $product->nama_produk)
 
 @section('content')
-<div class="bg-gradient-to-b from-yellow-50 to-white min-h-screen">
+<div class="bg-gradient-to-b from-yellow-50 to-white min-h-screen" style="background: url('{{ asset('images/oishi-background.png') }}') no-repeat center center fixed; background-size: cover;">
     <div class="max-w-7xl mx-auto px-4 py-12 relative">
         <!-- Tombol Kembali -->
         <a href="{{ route('product.index') }}" class="absolute top-4 right-4">
@@ -22,7 +22,7 @@
                     <img 
                         src="{{ asset('uploads/' . $product->gambar) }}" 
                         alt="{{ $product->nama_produk }}" 
-                        class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                        class="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300"
                     >
                 @else
                     <div class="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
